@@ -14,17 +14,14 @@ abstract class BaseField implements FieldContract
      */
     protected $value;
 
+    /**
+     * @var
+     */
+    protected $label;
+
     public function __construct($name)
     {
         $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function name()
-    {
-        return $this->name;
     }
 
     /**
@@ -46,6 +43,14 @@ abstract class BaseField implements FieldContract
     }
 
     /**
+     * @return mixed
+     */
+    public function name()
+    {
+        return $this->name;
+    }
+
+    /**
      * @param $value
      * @return $this
      */
@@ -62,5 +67,21 @@ abstract class BaseField implements FieldContract
     public function value()
     {
         return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function label()
+    {
+        return $this->label ?: ucfirst($this->name());
+    }
+
+    /**
+     * @param string $label
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
     }
 }

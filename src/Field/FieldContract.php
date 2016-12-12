@@ -36,4 +36,15 @@ interface FieldContract
      * @return mixed
      */
     public function value();
+
+    /**
+     * @param $label string
+     * @return $this
+     */
+    public function setLabel($label);
+
+    /**
+     * @return string
+     */
+    public function label();
 }
