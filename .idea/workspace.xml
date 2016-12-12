@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb2b056-c637-4890-ba66-9f4ed5c1a79c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/buttons.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/buttons/anchor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/buttons/button.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/buttons/submit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/field.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/fields.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/label.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/bootstrap3/text.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Builder.php" afterPath="$PROJECT_DIR$/src/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Button/BaseButton.php" afterPath="$PROJECT_DIR$/src/Button/BaseButton.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/BaseField.php" afterPath="$PROJECT_DIR$/src/Field/BaseField.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormRenderer.php" afterPath="$PROJECT_DIR$/src/FormRenderer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.md" afterPath="$PROJECT_DIR$/todo.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/buttons.php" afterPath="$PROJECT_DIR$/resources/views/simple/buttons.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/buttons/anchor.php" afterPath="$PROJECT_DIR$/resources/views/simple/buttons/anchor.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/buttons/button.php" afterPath="$PROJECT_DIR$/resources/views/simple/buttons/button.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/buttons/submit.php" afterPath="$PROJECT_DIR$/resources/views/simple/buttons/submit.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/field.php" afterPath="$PROJECT_DIR$/resources/views/simple/field.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/fields.php" afterPath="$PROJECT_DIR$/resources/views/simple/fields.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/form.php" afterPath="$PROJECT_DIR$/resources/views/simple/form.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/label.php" afterPath="$PROJECT_DIR$/resources/views/simple/label.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/text.php" afterPath="$PROJECT_DIR$/resources/views/simple/text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <ignored path="form-builder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,40 @@
     <favorites_list name="form-builder" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Bootstrap3Renderer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Renderer/Bootstrap3Renderer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormRenderer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FormRenderer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding>
+                <element signature="e#29#65#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,15 +104,12 @@
         <option value="$PROJECT_DIR$/src/FormRendererInterface.php" />
         <option value="$PROJECT_DIR$/src/Button/Submit.php" />
         <option value="$PROJECT_DIR$/resources/views/buttons/submit.php" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/tests/Button/BaseButtonTest.php" />
         <option value="$PROJECT_DIR$/src/Form.php" />
         <option value="$PROJECT_DIR$/resources/views/form.php" />
         <option value="$PROJECT_DIR$/resources/views/fields.php" />
         <option value="$PROJECT_DIR$/resources/views/buttons.php" />
         <option value="$PROJECT_DIR$/todo.md" />
-        <option value="$PROJECT_DIR$/src/FormRenderer.php" />
-        <option value="$PROJECT_DIR$/src/Builder.php" />
         <option value="$PROJECT_DIR$/src/Field/BaseField.php" />
         <option value="$PROJECT_DIR$/tests/Field/BaseFieldTest.php" />
         <option value="$PROJECT_DIR$/src/Button/BaseButton.php" />
@@ -91,6 +119,10 @@
         <option value="$PROJECT_DIR$/tests/OptionsTraitTest.php" />
         <option value="$PROJECT_DIR$/resources/views/simple/buttons/submit.php" />
         <option value="$PROJECT_DIR$/resources/views/simple/text.php" />
+        <option value="$PROJECT_DIR$/src/Builder.php" />
+        <option value="$PROJECT_DIR$/src/Renderer/Bootstrap3Renderer.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/src/FormRenderer.php" />
       </list>
     </option>
   </component>
@@ -135,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ColorIdeProjectViewPane">
         <subPane>
           <PATH>
@@ -155,7 +188,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,10 +211,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\job\projects\packages\form-builder\resources\views" />
+      <recent name="E:\job\projects\packages\form-builder\src" />
       <recent name="E:\job\projects\packages\form-builder\src\Action" />
       <recent name="E:\job\projects\packages\form-builder\tests\Field" />
       <recent name="E:\job\projects\packages\form-builder\src\Field" />
-      <recent name="E:\job\projects\packages\form-builder" />
     </key>
   </component>
   <component name="RunManager">
@@ -277,18 +309,21 @@
       <workItem from="1481545498762" duration="455000" />
       <workItem from="1481546063905" duration="19000" />
       <workItem from="1481546419756" duration="65000" />
-      <workItem from="1481546682982" duration="1296000" />
+      <workItem from="1481546682982" duration="1462000" />
+      <workItem from="1481548280434" duration="26000" />
+      <workItem from="1481548758107" duration="17000" />
+      <workItem from="1481548781869" duration="1276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19603000" />
+    <option name="totallyTimeSpent" value="21088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -315,8 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test" />
-    <entry file="file://$PROJECT_DIR$/node_modules/gulp-phpunit/src/utils.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/gulp-phpunit/index.js" />
     <entry file="file://$PROJECT_DIR$/gulpfile.js" />
     <entry file="file://$PROJECT_DIR$/src/TemplateEngineInterface.php">
@@ -510,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/simple/form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -548,46 +573,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/bootstrap3/buttons/anchor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
-          <folding>
-            <element signature="e#29#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormRenderer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="e#29#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Field/BaseField.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button/BaseButton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -600,22 +589,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OptionsHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" selection-start-line="12" selection-start-column="8" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/OptionHelperTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="4" selection-start-column="3" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OptionsHelper.php" />
+    <entry file="file://$PROJECT_DIR$/tests/OptionHelperTest.php" />
     <entry file="file://$PROJECT_DIR$/src/OptionsTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -636,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="110" selection-start-line="0" selection-start-column="110" selection-end-line="0" selection-end-column="110" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="120" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="120" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,6 +664,66 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Button/BaseButton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/bootstrap3/buttons/anchor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+          <folding>
+            <element signature="e#29#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="384" column="9" selection-start-line="384" selection-start-column="9" selection-end-line="384" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Renderer/Bootstrap3Renderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="e#29#65#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

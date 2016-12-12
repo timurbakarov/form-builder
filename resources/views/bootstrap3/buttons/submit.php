@@ -1,1 +1,1 @@
-<input type="submit" name="<?=$button->name()?>" value="<?=$button->label()?>" />
+<input type="submit" name="<?=$button->name()?>" value="<?=$button->label()?>" <?=$button->optionsToString()?> />

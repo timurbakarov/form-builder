@@ -1,7 +1,7 @@
 <form action="<?=$form->action()?>" method="POST">
 
-    <?php $form->renderFields()?>
+    <?php $renderer->renderFields($form)?>
 
-    <?php $form->renderButtons()?>
+    <?php $renderer->renderButtons($form)?>
 
 </form>

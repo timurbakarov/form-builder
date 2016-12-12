@@ -2,7 +2,7 @@
 
     <div class="form-group">
 
-        <?php $form->renderField($field)?>
+        <?php $renderer->renderField($form, $field)?>
 
     </div>
 

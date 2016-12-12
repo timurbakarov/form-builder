@@ -53,6 +53,25 @@ class Builder
     }
 
     /**
+     * @param FormRendererInterface $renderer
+     * @return $this
+     */
+    public function setRenderer(FormRendererInterface $renderer)
+    {
+        $this->renderer = $renderer;
+
+        return $this;
+    }
+
+    /**
+     * @return FormRendererInterface
+     */
+    public function renderer()
+    {
+        return $this->renderer;
+    }
+
+    /**
      * @param ButtonContract $action
      * @return $this
      */

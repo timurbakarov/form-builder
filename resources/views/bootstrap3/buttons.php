@@ -1,8 +1,8 @@
-<div>
+<div class="form-group">
 
     <?php foreach($form->buttons() as $button):?>
 
-        <?php $form->renderButton($button)?>
+        <?php $renderer->renderButton($form, $button)?>
 
     <?php endforeach?>
 
