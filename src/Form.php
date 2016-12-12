@@ -72,8 +72,6 @@ class Form
 
         $this->fields[$field->name()] = $field;
 
-        var_dump($this->fields);
-
         return $this;
     }
 
@@ -84,7 +82,7 @@ class Form
      */
     public function field($name)
     {
-        if(isset($this->fields[$name])) {
+        if(!isset($this->fields[$name])) {
             throw new Exception(sprintf('Field [%s] does not exist', $name));
         }
 
