@@ -32,7 +32,7 @@ class Builder
      */
     public static function createDefaultBuilder($path = null)
     {
-        $path = trim($path ?: __DIR__ . '/../resources/views') . '/';
+        $path = $path ?: __DIR__ . '/../resources/views/simple';
 
         return new self(new FormRenderer(new SimpleTemplateEngine(), $path));
     }

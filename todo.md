@@ -2,3 +2,5 @@
 - [x] Render fields
 - [ ] Fix form views path with trailing slash
 - [x] Change form render logic
+- [ ] Change renderer at runtime
+- [ ] Standalone forms

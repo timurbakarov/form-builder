@@ -20,7 +20,7 @@ class FormRenderer implements FormRendererInterface
     public function __construct(TemplateEngineInterface $templateEngine, $path)
     {
         $this->templateEngine = $templateEngine;
-        $this->path = $path;
+        $this->path = rtrim($path, '/') . '/';
     }
 
     /**

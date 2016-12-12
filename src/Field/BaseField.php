@@ -2,8 +2,12 @@
 
 namespace Tiix\Form\Field;
 
+use Tiix\Form\OptionsTrait;
+
 abstract class BaseField implements FieldContract
 {
+    use OptionsTrait;
+
     /**
      * @var
      */

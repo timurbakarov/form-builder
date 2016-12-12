@@ -2,8 +2,12 @@
 
 namespace Tiix\Form\Button;
 
+use Tiix\Form\OptionsTrait;
+
 abstract class BaseButton implements ButtonContract
 {
+    use OptionsTrait;
+
     /**
      * @var
      */
