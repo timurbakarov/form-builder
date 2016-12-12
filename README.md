@@ -1,30 +1,36 @@
-# :package_name
+# Tiix/Form
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Latest Unstable Version](https://poser.pugx.org/tiix/form/v/unstable)](https://packagist.org/packages/tiix/form)
+[![License](https://poser.pugx.org/tiix/form/license)](https://packagist.org/packages/tiix/form)
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Framework agnostic form builder
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require tiix/form
 ```
 
 ## Usage
 
+Default builder
+
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$builder = Tiix\Form\createDefaultBuilder();
+
+// create default form
+$form = $builder->build(\Tiix\Form\Form::class, $url, $defaults)
+    // add fields
+    ->addField(new Tiix\Form\Field\TextField('name', 'label'))
+    
+    // add buttons
+    ->addButton(new Tiix\Form\Button\Submit('name', 'label')
+
+    ->getForm();
+    
+$form->render();
 ```
 
 ## Change log
@@ -61,10 +67,10 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/:vendor/:package_name
+[link-packagist]: https://packagist.org/packages/tiix/form
 [link-travis]: https://travis-ci.org/:vendor/:package_name
 [link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/:vendor/:package_name
-[link-author]: https://github.com/:author_username
+[link-downloads]: https://packagist.org/packages/tiix/form
+[link-author]: https://github.com/timurbakarov
 [link-contributors]: ../../contributors
