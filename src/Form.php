@@ -72,7 +72,23 @@ class Form
 
         $this->fields[$field->name()] = $field;
 
+        var_dump($this->fields);
+
         return $this;
+    }
+
+    /**
+     * @param $name
+     * @return FieldContract
+     * @throws Exception
+     */
+    public function field($name)
+    {
+        if(isset($this->fields[$name])) {
+            throw new Exception(sprintf('Field [%s] does not exist', $name));
+        }
+
+        return $this->fields[$name];
     }
 
     /**

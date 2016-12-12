@@ -25,4 +25,15 @@ interface FieldContract
      * @return mixed
      */
     public function processRequestData(array $data);
+
+    /**
+     * @param $value
+     * @return mixed
+     */
+    public function setValue($value);
+
+    /**
+     * @return mixed
+     */
+    public function value();
 }

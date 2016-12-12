@@ -9,6 +9,11 @@ abstract class BaseField implements FieldContract
      */
     protected $name;
 
+    /**
+     * @var
+     */
+    protected $value;
+
     public function __construct($name)
     {
         $this->name = $name;
@@ -38,5 +43,24 @@ abstract class BaseField implements FieldContract
     public function isValid(array $data)
     {
         return isset($data[$this->name()]);
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function value()
+    {
+        return $this->value;
     }
 }

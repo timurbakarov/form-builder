@@ -15,7 +15,7 @@ class FormTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    public function it_return_form_action()
+    public function it_tteturn_form_action1()
     {
         $this->assertEquals('/blog/store', $this->form->action());
     }
