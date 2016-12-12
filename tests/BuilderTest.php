@@ -24,11 +24,50 @@ class BuilderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('John Doe', $form->field('name')->value());
     }
 
+    /** @test */
+    public function it_should_add_buttons()
+    {
+        $button = new TestButton('submit');
+
+        $form = $this->getBuilder()
+            ->build(\Tiix\Form\Form::class, '/store')
+            ->addButton($button)
+            ->getForm()
+        ;
+
+        $this->assertEquals(1, count($form->buttons()));
+        $this->assertEquals($button, $form->button('submit'));
+    }
+
+    /** @test */
+    public function it_should_throw_exception_if_button_exists()
+    {
+        $this->setExpectedException(\Tiix\Form\Exception::class, 'Button [submit] already exists');
+
+        $this->getBuilder()
+            ->build(\Tiix\Form\Form::class, '/store')
+            ->addButton(new TestButton('submit'))
+            ->addButton(new TestButton('submit'))
+            ->getForm()
+        ;
+    }
+
     /**
      * @return \Tiix\Form\Builder
      */
     private function getBuilder()
     {
         return new \Tiix\Form\Builder(new \Tiix\Form\FormRenderer(new \Tiix\Form\SimpleTemplateEngine(), __DIR__ .'/_data'));
+    }
+}
+
+class TestButton extends \Tiix\Form\Button\BaseButton
+{
+    /**
+     * @return string
+     */
+    public function id()
+    {
+        return 'submit';
     }
 }

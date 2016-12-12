@@ -2,6 +2,7 @@
 
 namespace Tiix\Form;
 
+use Tiix\Form\Button\ButtonContract;
 use Tiix\Form\Field\FieldContract;
 
 class Builder
@@ -49,6 +50,17 @@ class Builder
         $builder->setDefaultValues($defaultValues);
 
         return $builder;
+    }
+
+    /**
+     * @param ButtonContract $action
+     * @return $this
+     */
+    public function addButton(ButtonContract $button)
+    {
+        $this->form->addButton($button);
+
+        return $this;
     }
 
     /**

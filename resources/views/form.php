@@ -1,9 +1,7 @@
 <form action="<?=$form->action()?>" method="POST">
 
-    <?php foreach($form->fields() as $field):?>
+    <?php $form->renderFields()?>
 
-        <?php $form->renderField($field)?>
-
-    <?php endforeach?>
+    <?php $form->renderButtons()?>
 
 </form>
