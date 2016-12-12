@@ -1,2 +1,4 @@
-- [ ] Add fields
-- [ ] Render fields
+- [x] Add fields
+- [x] Render fields
+- [ ] Fix form views path with trailing slash
+- [x] Change form render logic

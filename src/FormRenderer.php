@@ -40,9 +40,38 @@ class FormRenderer implements FormRendererInterface
      */
     public function renderField(Form $form, FieldContract $field)
     {
+        return $this->templateEngine->render($this->path . 'field', [
+            'form' => $form,
+            'field' => $field,
+            'renderer' => $this,
+        ]);
+    }
+
+    /**
+     * @param Form $form
+     * @param FieldContract $field
+     * @return mixed
+     */
+    public function renderLabel(Form $form, FieldContract $field)
+    {
+        return $this->templateEngine->render($this->path . 'label', [
+            'form' => $form,
+            'field' => $field,
+            'renderer' => $this,
+        ]);
+    }
+
+    /**
+     * @param Form $form
+     * @param FieldContract $field
+     * @return mixed
+     */
+    public function renderInput(Form $form, FieldContract $field)
+    {
         return $this->templateEngine->render($this->path . $field->id(), [
             'form' => $form,
             'field' => $field,
+            'renderer' => $this,
         ]);
     }
 }

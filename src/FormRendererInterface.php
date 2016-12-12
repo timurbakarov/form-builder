@@ -17,4 +17,16 @@ interface FormRendererInterface
      * @return mixed
      */
     public function renderField(Form $form, FieldContract $field);
+
+    /**
+     * @param FieldContract $field
+     * @return mixed
+     */
+    public function renderLabel(Form $form, FieldContract $field);
+
+    /**
+     * @param FieldContract $field
+     * @return mixed
+     */
+    public function renderInput(Form $form, FieldContract $field);
 }

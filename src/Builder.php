@@ -27,6 +27,16 @@ class Builder
     }
 
     /**
+     * @return Builder
+     */
+    public static function createDefaultBuilder($path = null)
+    {
+        $path = trim($path ?: __DIR__ . '/../resources/views') . '/';
+
+        return new self(new FormRenderer(new SimpleTemplateEngine(), $path));
+    }
+
+    /**
      * @param Form $form
      * @return $this
      */
