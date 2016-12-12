@@ -83,5 +83,7 @@ abstract class BaseField implements FieldContract
     public function setLabel($label)
     {
         $this->label = $label;
+
+        return $this;
     }
 }

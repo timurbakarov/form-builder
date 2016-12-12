@@ -54,6 +54,14 @@ class FieldTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_set_label_should_return_field()
+    {
+        $field = new TestNameField('name');
+
+        $this->assertEquals($field, $field->setLabel('Label of name'));
+    }
+
+    /** @test */
     public function it_should_return_default_label()
     {
         $field = new TestNameField('name');
