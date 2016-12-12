@@ -1,5 +1,5 @@
 <?php foreach($form->fields() as $field):?>
 
-    <?php $form->renderField($field)?>
+    <?php $renderer->renderField($form, $field)?>
 
 <?php endforeach?>

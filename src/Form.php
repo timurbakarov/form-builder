@@ -104,48 +104,6 @@ class Form
     }
 
     /**
-     * @return mixed
-     */
-    public function render()
-    {
-        return $this->renderer->render($this);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function renderFields()
-    {
-        return $this->renderer->renderFields($this);
-    }
-
-    /**
-     * @param FieldContract $field
-     * @return mixed
-     */
-    public function renderField(FieldContract $field)
-    {
-        return $this->renderer->renderField($this, $field);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function renderButtons()
-    {
-        return $this->renderer->renderButtons($this);
-    }
-
-    /**
-     * @param ButtonContract $button
-     * @return mixed
-     */
-    public function renderButton(ButtonContract $button)
-    {
-        return $this->renderer->renderButton($this, $button);
-    }
-
-    /**
      * @param ButtonContract $action
      * @return $this
      * @throws Exception
@@ -181,5 +139,13 @@ class Form
         }
 
         return $this->buttons[$name];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function render()
+    {
+        return $this->renderer->render($this);
     }
 }

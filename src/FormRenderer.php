@@ -31,6 +31,7 @@ class FormRenderer implements FormRendererInterface
     {
         return $this->templateEngine->render($this->path . 'form', [
             'form' => $form,
+            'renderer' => $this,
         ]);
     }
 

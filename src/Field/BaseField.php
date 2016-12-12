@@ -19,9 +19,10 @@ abstract class BaseField implements FieldContract
      */
     protected $label;
 
-    public function __construct($name)
+    public function __construct($name, $label = null)
     {
         $this->name = $name;
+        $this->label = $label;
     }
 
     /**

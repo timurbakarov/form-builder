@@ -2,7 +2,7 @@
 
     <?php foreach($form->buttons() as $button):?>
 
-        <?php $form->renderButton($button)?>
+        <?php $renderer->renderButton($form, $button)?>
 
     <?php endforeach?>
 
