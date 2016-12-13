@@ -52,12 +52,38 @@ class BuilderTest extends PHPUnit_Framework_TestCase
         ;
     }
 
+    /** @test */
+    public function it_should_create_standalone_form()
+    {
+        $form = $this->getBuilder()
+            ->build(StandaloneTestForm::class, '/store')
+            ->getForm()
+        ;
+
+        $this->assertInstanceOf(StandaloneTestForm::class, $form);
+        $this->assertEquals('name', $form->field('name')->name());
+    }
+
     /**
      * @return \Tiix\Form\Builder
      */
     private function getBuilder()
     {
         return new \Tiix\Form\Builder(new \Tiix\Form\FormRenderer(new \Tiix\Form\SimpleTemplateEngine(), __DIR__ .'/_data'));
+    }
+}
+
+class StandaloneTestForm extends \Tiix\Form\Form
+{
+    /**
+     * @param \Tiix\Form\Builder $builder
+     * @return $this
+     */
+    public function build(\Tiix\Form\Builder $builder)
+    {
+        $builder->addField(new \Tiix\Form\Field\TextField('name'));
+
+        return $this;
     }
 }
 

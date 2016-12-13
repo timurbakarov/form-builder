@@ -1,6 +1,8 @@
 - [x] Add fields
 - [x] Render fields
-- [ ] Fix form views path with trailing slash
+- [x] Fix form views path with trailing slash
 - [x] Change form render logic
 - [ ] Change renderer at runtime
-- [ ] Standalone forms
+- [x] Standalone forms
+- [ ] Visibility
+- [ ] Transformations

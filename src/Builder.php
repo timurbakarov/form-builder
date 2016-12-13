@@ -49,6 +49,10 @@ class Builder
         $builder->setForm($form);
         $builder->setDefaultValues($defaultValues);
 
+        if(method_exists($form, 'build')) {
+            $form->build($builder);
+        }
+
         return $builder;
     }
 

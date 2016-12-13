@@ -18,7 +18,7 @@ $ composer require tiix/form
 Default builder
 
 ``` php
-$builder = Tiix\Form\createDefaultBuilder();
+$builder = Tiix\Form\Builder::createDefaultBuilder();
 
 // create default form
 $form = $builder->build(\Tiix\Form\Form::class, $url, $defaults)
