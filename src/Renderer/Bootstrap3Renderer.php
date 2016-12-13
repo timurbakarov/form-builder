@@ -20,6 +20,17 @@ class Bootstrap3Renderer extends FormRenderer
     protected $type = self::TYPE_BASIC;
 
     /**
+     * @return array
+     */
+    public function classesOptions()
+    {
+        return [
+            TextField::class => ['class' => 'form-control'],
+            Submit::class => ['class' => 'btn'],
+        ];
+    }
+
+    /**
      * @param $type
      * @return bool
      */

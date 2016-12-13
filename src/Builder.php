@@ -3,10 +3,16 @@
 namespace Tiix\Form;
 
 use Tiix\Form\Button\ButtonContract;
+use Tiix\Form\Extension\ExtensionInterface;
 use Tiix\Form\Field\FieldContract;
 
 class Builder
 {
+    /**
+     * @var ExtensionInterface[]
+     */
+    protected $extensions = [];
+
     /**
      * @var FormRendererInterface
      */
@@ -38,6 +44,17 @@ class Builder
     }
 
     /**
+     * @param ExtensionInterface $extension
+     * @return $this
+     */
+    public function addExtension(ExtensionInterface $extension)
+    {
+        $this->extensions[] = $extension;
+
+        return $this;
+    }
+
+    /**
      * @param Form $form
      * @return $this
      */
@@ -51,6 +68,10 @@ class Builder
 
         if(method_exists($form, 'build')) {
             $form->build($builder);
+        }
+
+        foreach($this->extensions as $extension) {
+            $extension->buildForm($builder, $form);
         }
 
         return $builder;

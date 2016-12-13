@@ -19,23 +19,26 @@ class FormRenderer implements FormRendererInterface
      */
     private $path;
 
-    /**
-     * @var
-     */
-    protected $elementsOptions = [];
-
-    /**
-     * @var array
-     */
-    protected $classesOptions = [
-        TextField::class => ['class' => 'form-control'],
-        Submit::class => ['class' => 'btn'],
-    ];
-
     public function __construct(TemplateEngineInterface $templateEngine, $path)
     {
         $this->templateEngine = $templateEngine;
         $this->path = rtrim($path, '/') . '/';
+    }
+
+    /**
+     * @return array
+     */
+    public function classesOptions()
+    {
+        return [];
+    }
+
+    /**
+     * @return array
+     */
+    public function elementsOptions()
+    {
+        return [];
     }
 
     /**
@@ -47,7 +50,7 @@ class FormRenderer implements FormRendererInterface
         $elements = array_merge($form->fields(), $form->buttons());
 
         foreach($elements as $element) {
-            foreach($this->classesOptions as $className => $options) {
+            foreach($this->classesOptions() as $className => $options) {
                 if(is_a($element, $className)) {
                     foreach($options as $key => $value) {
                         $element->mergeOption($key, $value);
@@ -56,9 +59,11 @@ class FormRenderer implements FormRendererInterface
             }
         }
 
+        $elementsOptions = $this->elementsOptions();
+
         foreach($elements as $element) {
-            if(isset($this->elementsOptions[$element->name()])) {
-                foreach($this->elementsOptions[$element->name()] as $key => $value) {
+            if(isset($elementsOptions[$element->name()])) {
+                foreach($elementsOptions[$element->name()] as $key => $value) {
                     $element->mergeOption($key, $value);
                 }
             }

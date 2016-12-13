@@ -6,3 +6,4 @@
 - [x] Standalone forms
 - [ ] Visibility
 - [ ] Transformations
+- [ ] Extensions (csrf)
