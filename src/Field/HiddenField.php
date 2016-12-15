@@ -2,16 +2,10 @@
 
 namespace Tiix\Form\Field;
 
-class HiddenField extends InputField
-{
-    /**
-     * @return string
-     */
-    public function id()
-    {
-        return 'text';
-    }
+use Tiix\Form\Typeable;
 
+class HiddenField extends BaseField implements Typeable
+{
     /**
      * @return string
      */

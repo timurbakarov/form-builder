@@ -17,11 +17,6 @@ abstract class Element
     }
 
     /**
-     * @return string
-     */
-    abstract public function id();
-
-    /**
      * @return mixed
      */
     public function name()

@@ -2,8 +2,13 @@
 
 namespace Tiix\Form\Field;
 
-class TextAreaField extends BaseField
+use Tiix\Form\Labelable;
+use Tiix\Form\LabelableTrait;
+
+class TextAreaField extends BaseField implements Labelable
 {
+    use LabelableTrait;
+
     /**
      * @return string
      */

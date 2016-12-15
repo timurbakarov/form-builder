@@ -4,6 +4,8 @@ namespace Tiix\Form;
 
 use Tiix\Form\Button\BaseButton;
 use Tiix\Form\Field\BaseField;
+use Tiix\Form\Field\InputField;
+use Tiix\Form\Field\TextAreaField;
 
 class FormRenderer implements FormRendererInterface
 {
@@ -16,6 +18,14 @@ class FormRenderer implements FormRendererInterface
      * @var
      */
     private $path;
+
+    /**
+     * @var array
+     */
+    protected $views = [
+        TextAreaField::class => 'textarea',
+        Typeable::class => 'input',
+    ];
 
     public function __construct(TemplateEngineInterface $templateEngine, $path)
     {
@@ -125,7 +135,9 @@ class FormRenderer implements FormRendererInterface
      */
     public function renderInput(Form $form, BaseField $field)
     {
-        return $this->templateEngine->render($this->path . 'fields/' . $field->id(), [
+        $view = $this->getElementView($field);
+
+        return $this->templateEngine->render($this->path . 'fields/' . $view, [
             'form' => $form,
             'field' => $field,
             'renderer' => $this,
@@ -167,5 +179,21 @@ class FormRenderer implements FormRendererInterface
             'button' => $button,
             'renderer' => $this,
         ]);
+    }
+
+    /**
+     * @param $field
+     * @return mixed
+     * @throws Exception
+     */
+    private function getElementView(Element $element)
+    {
+        foreach($this->views as $viewClass => $view) {
+            if($element instanceof $viewClass) {
+                return $view;
+            }
+        }
+
+        throw new Exception('There is no view for element ' . get_class($element));
     }
 }

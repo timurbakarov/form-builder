@@ -2,15 +2,13 @@
 
 namespace Tiix\Form\Field;
 
-class TextField extends LabelableInputField
+use Tiix\Form\Labelable;
+use Tiix\Form\LabelableTrait;
+use Tiix\Form\Typeable;
+
+class TextField extends BaseField implements Typeable, Labelable
 {
-    /**
-     * @return string
-     */
-    public function id()
-    {
-        return 'text';
-    }
+    use LabelableTrait;
 
     /**
      * @return string
