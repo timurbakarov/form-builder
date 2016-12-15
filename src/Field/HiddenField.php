@@ -2,8 +2,16 @@
 
 namespace Tiix\Form\Field;
 
-class HiddenField extends TextField
+class HiddenField extends InputField
 {
+    /**
+     * @return string
+     */
+    public function id()
+    {
+        return 'text';
+    }
+
     /**
      * @return string
      */

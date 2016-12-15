@@ -2,7 +2,7 @@
 
 namespace Tiix\Form\Field;
 
-class TextField extends InputField
+class TextField extends LabelableInputField
 {
     /**
      * @return string

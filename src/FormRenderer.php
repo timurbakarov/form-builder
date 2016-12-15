@@ -107,6 +107,10 @@ class FormRenderer implements FormRendererInterface
      */
     public function renderLabel(Form $form, BaseField $field)
     {
+        if(! ($field instanceof Labelable)) {
+            return '';
+        }
+
         return $this->templateEngine->render($this->path . 'label', [
             'form' => $form,
             'field' => $field,

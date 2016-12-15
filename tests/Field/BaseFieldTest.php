@@ -8,12 +8,6 @@ class BaseFieldTest extends PHPUnit_Framework_TestCase
         $field = new SimpleField('name');
 
         $this->assertEquals('name', $field->name());
-        $this->assertEquals('Name', $field->label());
-
-        $field = new SimpleField('name', 'Name label');
-
-        $this->assertEquals('name', $field->name());
-        $this->assertEquals('Name label', $field->label());
     }
 }
 

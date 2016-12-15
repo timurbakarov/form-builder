@@ -11,15 +11,9 @@ abstract class Element
      */
     protected $name;
 
-    /**
-     * @var
-     */
-    protected $label;
-
-    public function __construct($name, $label = null)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->label = $label;
     }
 
     /**
@@ -35,21 +29,5 @@ abstract class Element
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
-    public function label()
-    {
-        return $this->label ?: ucfirst($this->name());
-    }
 
-    /**
-     * @param string $label
-     */
-    public function setLabel($label)
-    {
-        $this->label = $label;
-
-        return $this;
-    }
 }
