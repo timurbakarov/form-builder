@@ -2,8 +2,10 @@
 
 namespace Tiix\Form;
 
+use Tiix\Form\Button\BaseButton;
 use Tiix\Form\Button\ButtonContract;
 use Tiix\Form\Extension\ExtensionInterface;
+use Tiix\Form\Field\BaseField;
 use Tiix\Form\Field\FieldContract;
 
 class Builder
@@ -97,10 +99,10 @@ class Builder
     }
 
     /**
-     * @param ButtonContract $action
+     * @param BaseButton $action
      * @return $this
      */
-    public function addButton(ButtonContract $button)
+    public function addButton(BaseButton $button)
     {
         $this->form->addButton($button);
 
@@ -108,10 +110,10 @@ class Builder
     }
 
     /**
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return $this
      */
-    public function addField(FieldContract $field)
+    public function addField(BaseField $field)
     {
         if(isset($this->defaultValues[$field->name()])) {
             $field->setValue($this->defaultValues[$field->name()]);

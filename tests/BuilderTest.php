@@ -42,7 +42,8 @@ class BuilderTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_throw_exception_if_button_exists()
     {
-        $this->setExpectedException(\Tiix\Form\Exception::class, 'Button [submit] already exists');
+        $this->expectException(\Tiix\Form\Exception::class);
+        $this->expectExceptionMessage('Button [submit] already exists');
 
         $this->getBuilder()
             ->build(\Tiix\Form\Form::class, '/store')

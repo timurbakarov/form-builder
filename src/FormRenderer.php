@@ -2,10 +2,8 @@
 
 namespace Tiix\Form;
 
-use Tiix\Form\Button\ButtonContract;
-use Tiix\Form\Button\Submit;
-use Tiix\Form\Field\FieldContract;
-use Tiix\Form\Field\TextField;
+use Tiix\Form\Button\BaseButton;
+use Tiix\Form\Field\BaseField;
 
 class FormRenderer implements FormRendererInterface
 {
@@ -90,10 +88,10 @@ class FormRenderer implements FormRendererInterface
 
     /**
      * @param Form $form
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderField(Form $form, FieldContract $field)
+    public function renderField(Form $form, BaseField $field)
     {
         return $this->templateEngine->render($this->path . 'field', [
             'form' => $form,
@@ -104,10 +102,10 @@ class FormRenderer implements FormRendererInterface
 
     /**
      * @param Form $form
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderLabel(Form $form, FieldContract $field)
+    public function renderLabel(Form $form, BaseField $field)
     {
         return $this->templateEngine->render($this->path . 'label', [
             'form' => $form,
@@ -118,12 +116,12 @@ class FormRenderer implements FormRendererInterface
 
     /**
      * @param Form $form
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderInput(Form $form, FieldContract $field)
+    public function renderInput(Form $form, BaseField $field)
     {
-        return $this->templateEngine->render($this->path . $field->id(), [
+        return $this->templateEngine->render($this->path . 'fields/' . $field->id(), [
             'form' => $form,
             'field' => $field,
             'renderer' => $this,
@@ -155,10 +153,10 @@ class FormRenderer implements FormRendererInterface
 
     /**
      * @param Form $form
-     * @param ButtonContract $button
+     * @param BaseButton $button
      * @return mixed
      */
-    public function renderButton(Form $form, ButtonContract $button)
+    public function renderButton(Form $form, BaseButton $button)
     {
         return $this->templateEngine->render($this->path . 'buttons/' . $button->id(), [
             'form' => $form,

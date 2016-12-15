@@ -2,8 +2,8 @@
 
 namespace Tiix\Form;
 
-use Tiix\Form\Button\ButtonContract;
-use Tiix\Form\Field\FieldContract;
+use Tiix\Form\Button\BaseButton;
+use Tiix\Form\Field\BaseField;
 
 interface FormRendererInterface
 {
@@ -19,22 +19,22 @@ interface FormRendererInterface
     public function renderFields(Form $form);
 
     /**
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderField(Form $form, FieldContract $field);
+    public function renderField(Form $form, BaseField $field);
 
     /**
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderLabel(Form $form, FieldContract $field);
+    public function renderLabel(Form $form, BaseField $field);
 
     /**
-     * @param FieldContract $field
+     * @param BaseField $field
      * @return mixed
      */
-    public function renderInput(Form $form, FieldContract $field);
+    public function renderInput(Form $form, BaseField $field);
 
     /**
      * @param $this
@@ -44,8 +44,8 @@ interface FormRendererInterface
 
     /**
      * @param Form $form
-     * @param ButtonContract $button
+     * @param BaseButton $button
      * @return mixed
      */
-    public function renderButton(Form $form, ButtonContract $button);
+    public function renderButton(Form $form, BaseButton $button);
 }

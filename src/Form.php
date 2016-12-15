@@ -2,8 +2,8 @@
 
 namespace Tiix\Form;
 
-use Tiix\Form\Button\ButtonContract;
-use Tiix\Form\Field\FieldContract;
+use Tiix\Form\Button\BaseButton;
+use Tiix\Form\Field\BaseField;
 
 class Form
 {
@@ -13,12 +13,12 @@ class Form
     private $action;
 
     /**
-     * @var FieldContract[]
+     * @var BaseField[]
      */
     private $fields = [];
 
     /**
-     * @var ButtonContract[]
+     * @var BaseButton[]
      */
     private $buttons = [];
 
@@ -70,7 +70,7 @@ class Form
     /**
      * @return $this
      */
-    public function addField(FieldContract $field)
+    public function addField(BaseField $field)
     {
         if(isset($this->fields[$field->name()])) {
             throw new Exception(sprintf('Name [%s] already exists', $field->name()));
@@ -83,7 +83,7 @@ class Form
 
     /**
      * @param $name
-     * @return FieldContract
+     * @return BaseField
      * @throws Exception
      */
     public function field($name)
@@ -96,7 +96,7 @@ class Form
     }
 
     /**
-     * @return Field\FieldContract[]
+     * @return Field\BaseField[]
      */
     public function fields()
     {
@@ -104,11 +104,11 @@ class Form
     }
 
     /**
-     * @param ButtonContract $action
+     * @param BaseButton $action
      * @return $this
      * @throws Exception
      */
-    public function addButton(ButtonContract $action)
+    public function addButton(BaseButton $action)
     {
         if(isset($this->buttons[$action->name()])) {
             throw new Exception(sprintf('Button [%s] already exists', $action->name()));
@@ -120,7 +120,7 @@ class Form
     }
 
     /**
-     * @return Button\ButtonContract[]
+     * @return Button\BaseButton[]
      */
     public function buttons()
     {
@@ -129,7 +129,7 @@ class Form
 
     /**
      * @param $name
-     * @return ButtonContract
+     * @return BaseButton
      * @throws Exception
      */
     public function button($name)

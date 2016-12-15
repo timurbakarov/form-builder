@@ -2,13 +2,8 @@
 
 namespace Tiix\Form\Field;
 
-class TextField extends BaseField
+class TextField extends InputField
 {
-    /**
-     * @var string
-     */
-    protected $type = 'text';
-
     /**
      * @return string
      */
@@ -22,6 +17,6 @@ class TextField extends BaseField
      */
     public function type()
     {
-        return $this->type;
+        return 'text';
     }
 }

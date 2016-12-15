@@ -2,58 +2,14 @@
 
 namespace Tiix\Form\Field;
 
-use Tiix\Form\OptionsTrait;
+use Tiix\Form\Element;
 
-abstract class BaseField implements FieldContract
+abstract class BaseField extends Element
 {
-    use OptionsTrait;
-
-    /**
-     * @var
-     */
-    protected $name;
-
     /**
      * @var
      */
     protected $value;
-
-    /**
-     * @var
-     */
-    protected $label;
-
-    public function __construct($name, $label = null)
-    {
-        $this->name = $name;
-        $this->label = $label;
-    }
-
-    /**
-     * @param array $data
-     * @return bool|mixed
-     */
-    public function processRequestData(array $data)
-    {
-        return $data[$this->name()];
-    }
-
-    /**
-     * @param array $data
-     * @return bool
-     */
-    public function isValid(array $data)
-    {
-        return isset($data[$this->name()]);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function name()
-    {
-        return $this->name;
-    }
 
     /**
      * @param $value
@@ -75,20 +31,20 @@ abstract class BaseField implements FieldContract
     }
 
     /**
-     * @return string
+     * @param array $data
+     * @return bool|mixed
      */
-    public function label()
+    public function processRequestData(array $data)
     {
-        return $this->label ?: ucfirst($this->name());
+        return $data[$this->name()];
     }
 
     /**
-     * @param string $label
+     * @param array $data
+     * @return bool
      */
-    public function setLabel($label)
+    public function isValid(array $data)
     {
-        $this->label = $label;
-
-        return $this;
+        return isset($data[$this->name()]);
     }
 }
